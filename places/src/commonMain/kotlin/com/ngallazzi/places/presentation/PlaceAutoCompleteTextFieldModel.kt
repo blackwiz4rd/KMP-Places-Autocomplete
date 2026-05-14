@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.ngallazzi.places.domain.Place
 import com.ngallazzi.places.domain.PlaceDetails
 import com.ngallazzi.places.domain.Suggestion
+import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -14,6 +15,7 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
 
+@OptIn(FlowPreview::class)
 internal class PlaceAutoCompleteTextFieldModel(
     private val helper: PlacesHelper,
     private val languageCode: String,
